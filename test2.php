@@ -1,8 +1,8 @@
 <?php
-$host = "213.171.200.94";
-$user = "ertioertio";
-$password = "Yankee890";
-$dbname = "coffeedb";
+$host = "";
+$user = "";
+$password = "";
+$dbname = "";
 
 
  $db = mysqli_connect($host, $user, $password, $dbname)
