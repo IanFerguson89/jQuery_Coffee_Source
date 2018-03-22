@@ -1,8 +1,8 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-$host = "213.171.200.94";
-$user = "ertioertio";
-$password = "Yankee890";
+$host = "";
+$user = "";
+$password = "";
 $dbname = "coffeedb";
 
 
