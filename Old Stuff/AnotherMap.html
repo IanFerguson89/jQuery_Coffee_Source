@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Coffee Shop Application</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <style>
+        #content {
+            padding: 0 !important;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD5gBGBHhigydaSQezTzqXQhJZiTC8Iy5E&sensor=true&libraries=geometry" async defer callback=initMap></script>
+
+    <script src="MapCode.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Top Coffee Shops
+        </h3>
+    </div>
+
+    <div data-role="content" id="homeContent">
+        <p style="text-align:center;"><img src="http://coffeeshoplovers.com/wp-content/uploads/2015/08/Coffee-Shop-Logo.png" height ="75" width="75"></p>
+        <a href="#" class="ui-btn ui-shadow ui-corner-all" id="getLocation">Get Location</a>
+        <ul data-role="listview" data-inset="true">
+            <li id = posToOneVal><a href="#index" id = buttonOne data-transition="slide">
+                <h2 id = "nameOne">Your</h2>
+                <p id = shopOneDistance></p></a>
+            </li>
+            <li id = posToTwoVal><a href="#index" id = buttonTwo data-transition="slide">
+                <h2 id = "nameTwo">Shops</h2>
+                <p id = shopTwoDistance></p></a>
+            </li>
+            <li id = posToThreeVal><a href="#index" id="blendButton" data-transition="slide">
+                <h2 id = "nameThree">Will</h2>
+                <p id = shopThreeDistance></p></a>
+            </>
+            <li id = posToFourVal><a href="#index" id="costaButton" data-transition="slide">
+                <h2 id = "nameFour">Appear</h2>
+                <p id = shopFourDistance></p></a>
+            </li>
+            <li id = posToFiveVal><a href="#index" id="uwsButton" data-transition="slide">
+                <h2 id = "nameFive">Here</h2>
+                <p id = shopFiveDistance></p></a>
+            </li>
+        </ul>
+
+        <a href="#jsonPopup" data-rel="dialog" data-transition="pop" class="ui-btn ui-shadow ui-corner-all"><h3>View raw JSON data</h3>
+        </a>
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            Shop Locator Application
+        </h3>
+    </div>
+</div>
+<div data-role="page" id="index">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Shop Details
+        </h3>
+    </div>
+
+    <div data-role="content" id="content">
+        <div id="map_canvas" style="height:50%"></div>
+        <h4 id = shopHeader>Shop name goes here</h4>
+        <h5 id = shopAddress>Address:</h5>
+        <div id="shopBlurb"></div>
+        <h4>Opening hours:</h4>
+        <h5 id="monSatHours"></h5>
+        <h5 id="extraHours"></h5>
+        <h5 id="sunHours"></h5>
+        <h5 id="shopNumber"></h5>
+
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            Shop Locator Application
+        </h3>
+    </div>
+</div>
+
+<div data-role="page" id="jsonPopup">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Shop Details
+        </h3>
+    </div>
+
+    <div data-role="content" id="content">
+        <table id="coffeeTable">
+            <tbody>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Blurb</th>
+                <th>Contact</th>
+                <th>Mon - Sat</th>
+                <th>Sunday</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            Shop Locator Application
+        </h3>
+    </div>
+</div>
+</body>
+</html>

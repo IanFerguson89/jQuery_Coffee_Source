@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "org.jorgecardoso.ldm.jquerymobileapp"
+        versionCode = "1"
+        version     = "1.0.0" >
+
+    <name>Jquery Coffee Locator</name>
+
+    <description>
+        A coffee shop locator application designed to support my dissertation.
+    </description>
+
+    <author href="" email="">
+        Ian Ferguson
+    </author>
+
+<plugin name="cordova-plugin-whitelist" />
+<plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
+<access origin="*" />
+</widget>
